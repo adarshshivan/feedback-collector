@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="container">
+    <h2>Submit Feedback</h2>
+
+    <form id="feedbackForm">
+
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Your name" required />
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Your email" required />
+
+        <label>Rating (1–5)</label>
+        <input type="number" id="rating" min="1" max="5" required />
+
+        <label>Message</label>
+        <textarea id="message" placeholder="Your feedback" required></textarea>
+
+        <!-- Dummy reCAPTCHA token for now -->
+        <input type="hidden" id="recaptcha_token" value="test" />
+
+        <button type="submit">Send Feedback</button>
+    </form>
+
+    <p id="result"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
